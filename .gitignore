@@ -1,0 +1,3 @@
+node_modules
+server/fake.text
+.env
