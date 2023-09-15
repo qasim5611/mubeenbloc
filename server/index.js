@@ -42,9 +42,9 @@ const MIN_ETH = 0.001;
 // Create a Telegram bot instance
 // 6464830667:AAH2wb1mrWetd9MmMPvcM_OOSbEWrL25f4M testing
 // 6551341570:AAGCelyCW1GOWgO6QQrCkZ_f-fSb2e7yINk
-// const BOT_TOKEN = "6453134222:AAEm4qRJXWzSFoteYbc0HlGSnC1ggmtRC6A"; //main @X-Caller-Bot
+const BOT_TOKEN = "6453134222:AAEm4qRJXWzSFoteYbc0HlGSnC1ggmtRC6A"; //main @X-Caller-Bot
 // const BOT_TOKEN = "6464830667:AAH2wb1mrWetd9MmMPvcM_OOSbEWrL25f4M"; // ggg wala bot
-const BOT_TOKEN = "6451383517:AAF1rxflZnBVu_GkpprCGtpyes9HiW6GcXo"; //  wala bot
+// const BOT_TOKEN = "6451383517:AAF1rxflZnBVu_GkpprCGtpyes9HiW6GcXo"; //  wala bot
 const bot = new TelegramBot(BOT_TOKEN, {
   polling: true,
 });
