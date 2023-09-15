@@ -42,9 +42,9 @@ const MIN_ETH = 0.001;
 // Create a Telegram bot instance
 // 6464830667:AAH2wb1mrWetd9MmMPvcM_OOSbEWrL25f4M testing
 // 6551341570:AAGCelyCW1GOWgO6QQrCkZ_f-fSb2e7yINk
-const BOT_TOKEN = "6453134222:AAEm4qRJXWzSFoteYbc0HlGSnC1ggmtRC6A"; //main @X-Caller-Bot
+// const BOT_TOKEN = "6453134222:AAEm4qRJXWzSFoteYbc0HlGSnC1ggmtRC6A"; //main @X-Caller-Bot
 // const BOT_TOKEN = "6464830667:AAH2wb1mrWetd9MmMPvcM_OOSbEWrL25f4M"; // ggg wala bot
-// const BOT_TOKEN = "6561712712:AAG1HDleFLOa5ptYfRKyugsKFADKKsVA_8g"; //  wala bot
+const BOT_TOKEN = "6451383517:AAF1rxflZnBVu_GkpprCGtpyes9HiW6GcXo"; //  wala bot
 const bot = new TelegramBot(BOT_TOKEN, {
   polling: true,
 });
@@ -441,7 +441,7 @@ async function updateRugPull(chatId) {
 
     await updateDoc(userRef, newData);
 
-    bot.sendMessage(chatId, `X-Caller Deactivate.`);
+    bot.sendMessage(chatId, `X-Caller Deactivated.`);
   } catch (error) {
     console.error("An error occurred:", error);
     bot.sendMessage(chatId, "An error occurred.");
@@ -801,6 +801,7 @@ function storeData(data) {
 
 function getSocialKeyboard(receivedData) {
   const id = storeData(receivedData);
+
   return {
     inline_keyboard: [
       [
@@ -1316,6 +1317,8 @@ factory.on("PairCreated", async (token0, token1, pairAddress) => {
 //     console.log(e);
 //   }
 // })();
+
+app.get("/", (req, res) => res.send(`Server running on port ${PORT}`));
 
 process.on("uncaughtException", (err, origin) => {
   fs.writeSync(
